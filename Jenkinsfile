@@ -37,7 +37,7 @@ pipeline {
         stage ('deploy app to minikube'){
 
            steps{
-                withKubeConfig([credentialsId: 'kubeconfig', serverUrl: 'https://127.0.0.1:65265']) {
+                withKubeConfig([credentialsId: 'kubeconfig', serverUrl: 'https://192.168.59.100:8443']) {
                   bat 'kubectl apply -f astonvilla-be.yaml'
                 }
            }
