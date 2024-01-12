@@ -25,9 +25,11 @@ kind: Service
 metadata:
   name: astonvilla-be
 spec:
+  type: NodePort
   selector:
     app: astonvilla-be
   ports:
     - protocol: TCP
       port: 8000
       targetPort: 80
+      nodePort: 30001
