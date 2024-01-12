@@ -26,7 +26,7 @@ kind: Service
 metadata:
   name: astonvilla-be
 spec:
-  type: nodePort
+  type: NodePort
   selector:
     app: astonvilla-be
   ports:
